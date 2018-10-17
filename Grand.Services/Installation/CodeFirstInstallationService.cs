@@ -5228,6 +5228,7 @@ namespace Grand.Services.Installation
                 PhoneEnabled = false,
                 FaxEnabled = false,
                 AcceptPrivacyPolicyEnabled = false,
+                PhiDetailsEnabled = true,
                 NewsletterEnabled = true,
                 NewsletterTickedByDefault = true,
                 HideNewsletterBlock = false,

@@ -6105,6 +6105,9 @@
   <LocaleResource Name="Admin.Configuration.Settings.CustomerUser.AcceptPrivacyPolicyEnabled">
     <Value>'Accept privacy policy' enabled</Value>
   </LocaleResource>
+  <LocaleResource Name="Admin.Configuration.Settings.CustomerUser.PhiDetailsEnabled">
+    <Value>'Private Health Insurance' enabled</Value>
+  </LocaleResource>
   <LocaleResource Name="Admin.Configuration.Settings.CustomerUser.AcceptPrivacyPolicyEnabled.Hint">
     <Value>Ask customers to accept privacy policy during registration.</Value>
   </LocaleResource>

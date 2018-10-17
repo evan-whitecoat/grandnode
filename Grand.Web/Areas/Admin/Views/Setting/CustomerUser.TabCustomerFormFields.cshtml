@@ -401,6 +401,18 @@
         </div>
         <div class="form-group">
             <div class="col-md-4 col-sm-4 text-right">
+                <admin-label asp-for="CustomerSettings.PhiDetailsEnabled" class="control-label"/>
+            </div>
+            <div class="col-md-8 col-sm-8">
+                <label class="mt-checkbox mt-checkbox-outline">
+                    <admin-input asp-for="CustomerSettings.PhiDetailsEnabled" />
+                    <span></span>
+                </label>
+                <span asp-validation-for="CustomerSettings.PhiDetailsEnabled"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-4 col-sm-4 text-right">
                 <admin-label asp-for="CustomerSettings.NewsletterEnabled" class="control-label"/>
             </div>
             <div class="col-md-8 col-sm-8">

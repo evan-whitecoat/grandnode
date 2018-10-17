@@ -171,6 +171,9 @@ namespace Grand.Web.Areas.Admin.Models.Settings
 
             [GrandResourceDisplayName("Admin.Configuration.Settings.CustomerUser.AcceptPrivacyPolicyEnabled")]
             public bool AcceptPrivacyPolicyEnabled { get; set; }
+            
+            [GrandResourceDisplayName("Admin.Configuration.Settings.CustomerUser.PhiDetailsEnabled")]
+            public bool PhiDetailsEnabled { get; set; }
         }
 
         public partial class AddressSettingsModel : BaseGrandModel

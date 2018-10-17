@@ -125,6 +125,8 @@ namespace Grand.Web.Models.Customer
         public bool Newsletter { get; set; }
         
         public bool AcceptPrivacyPolicyEnabled { get; set; }
+        
+        public bool PhiDetailsEnabled { get; set; }
 
         //time zone
         [GrandResourceDisplayName("Account.Fields.TimeZone")]

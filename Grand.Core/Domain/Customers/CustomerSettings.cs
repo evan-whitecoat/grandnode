@@ -295,6 +295,11 @@ namespace Grand.Core.Domain.Customers
         /// Gets or sets a value indicating whether privacy policy should accepted during registration
         /// </summary>
         public bool AcceptPrivacyPolicyEnabled { get; set; }
+        
+        /// <summary>
+        /// Gets or sets a value indicating whether private health insurance details should accepted during registration
+        /// </summary>
+        public bool PhiDetailsEnabled { get; set; }
 
         #endregion
     }
