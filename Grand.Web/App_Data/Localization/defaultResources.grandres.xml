@@ -147,6 +147,9 @@
   <LocaleResource Name="Account.CompanyDetails">
     <Value>Company Details</Value>
   </LocaleResource>
+  <LocaleResource Name="Account.PhiDetails">
+    <Value>Private Health Insurance Details</Value>
+  </LocaleResource>
   <LocaleResource Name="Account.CustomerAddresses">
     <Value>Addresses</Value>
   </LocaleResource>
@@ -323,6 +326,9 @@
   </LocaleResource>
   <LocaleResource Name="Account.Fields.Company.Required">
     <Value>Company name is required</Value>
+  </LocaleResource>
+  <LocaleResource Name="Account.Fields.PHI.PolicyNumber">
+    <Value>Policy Number</Value>
   </LocaleResource>
   <LocaleResource Name="Account.Fields.ConfirmPassword">
     <Value>Confirm password</Value>

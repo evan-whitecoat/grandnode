@@ -113,6 +113,12 @@ namespace Grand.Web.Validators.Customer
             {
                 RuleFor(x => x.Fax).NotEmpty().WithMessage(localizationService.GetResource("Account.Fields.Fax.Required"));
             }
+            if (customerSettings.PhiDetailsEnabled)
+            {
+                // TODO: localization
+                RuleFor(x => x.PhiPolicyNumber).NotEmpty().WithMessage("Policy number is required");
+                RuleFor(x => x.PhiHealthFundName).NotEmpty().WithMessage("Health fund name is required");
+            }
         }
     }
 }

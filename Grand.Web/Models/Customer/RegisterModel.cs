@@ -127,7 +127,10 @@ namespace Grand.Web.Models.Customer
         public bool AcceptPrivacyPolicyEnabled { get; set; }
         
         public bool PhiDetailsEnabled { get; set; }
-
+        [GrandResourceDisplayName("Account.Fields.PHI.PolicyNumber")]
+        public string PhiPolicyNumber { get; set; }
+        
+        public string PhiHealthFundName { get; set; }
         //time zone
         [GrandResourceDisplayName("Account.Fields.TimeZone")]
         public string TimeZoneId { get; set; }
