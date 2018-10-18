@@ -476,6 +476,12 @@ namespace Grand.Web.Controllers
                         _genericAttributeService.SaveAttribute(customer, SystemCustomerAttributeNames.Phone, model.Phone);
                     if (_customerSettings.FaxEnabled)
                         _genericAttributeService.SaveAttribute(customer, SystemCustomerAttributeNames.Fax, model.Fax);
+                    if (_customerSettings.PhiDetailsEnabled)
+                    {
+                        _genericAttributeService.SaveAttribute(customer, SystemCustomerAttributeNames.PhiPolicyNumber, model.PhiPolicyNumber);
+                        _genericAttributeService.SaveAttribute(customer, SystemCustomerAttributeNames.PhiHealthFundName, model.PhiHealthFundName);
+                        _genericAttributeService.SaveAttribute(customer, SystemCustomerAttributeNames.PhiPolicyHolder, model.PhiPolicyHolder);
+                    }
 
                     //newsletter
                     if (_customerSettings.NewsletterEnabled)

@@ -131,6 +131,8 @@ namespace Grand.Web.Models.Customer
         public string PhiPolicyNumber { get; set; }
         
         public string PhiHealthFundName { get; set; }
+        
+        public string PhiPolicyHolder { get; set; }
         //time zone
         [GrandResourceDisplayName("Account.Fields.TimeZone")]
         public string TimeZoneId { get; set; }

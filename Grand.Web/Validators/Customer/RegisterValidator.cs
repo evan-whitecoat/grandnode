@@ -118,6 +118,7 @@ namespace Grand.Web.Validators.Customer
                 // TODO: localization
                 RuleFor(x => x.PhiPolicyNumber).NotEmpty().WithMessage("Policy number is required");
                 RuleFor(x => x.PhiHealthFundName).NotEmpty().WithMessage("Health fund name is required");
+                RuleFor(x => x.PhiPolicyHolder).NotEmpty().WithMessage("Policy holder name is required");
             }
         }
     }

@@ -19,6 +19,9 @@ namespace Grand.Core.Domain.Customers
         public static string VatNumber { get { return "VatNumber"; } }
         public static string VatNumberStatusId { get { return "VatNumberStatusId"; } }
         public static string TimeZoneId { get { return "TimeZoneId"; } }
+        public static string PhiPolicyNumber { get { return "PhiPolicyNumber"; } }
+        public static string PhiHealthFundName { get { return "PhiHealthFundName"; } }
+        public static string PhiPolicyHolder { get { return "PhiPolicyHolder"; } }
         public static string CustomCustomerAttributes { get { return "CustomCustomerAttributes"; } }
 
         //Other attributes

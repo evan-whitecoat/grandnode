@@ -374,7 +374,12 @@
                     new {@class = "custom-select"})
                 <span asp-validation-for="PhiHealthFundName"></span>
             </div>
-
+            <div class="form-group">
+                @* TODO: localization & multiple policy holders *@
+                <label asp-for="PhiPolicyHolder" class="col-form-label">Policy Holder:</label>
+                <input asp-for="PhiPolicyHolder" class="form-control"/>
+                <span asp-validation-for="PhiPolicyHolder"></span>
+            </div>
         </div>
     </div>
 }
