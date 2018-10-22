@@ -43,11 +43,18 @@
   </ItemGroup>
   
   <ItemGroup>
+    <None Include="Components\PaymentHeathyPaycs.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <None Update="Description.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="logo.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Views\PaymentHealthyPay\PaymentInfo.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
+
 </Project>
