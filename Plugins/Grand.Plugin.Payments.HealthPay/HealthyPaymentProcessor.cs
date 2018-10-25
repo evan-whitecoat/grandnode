@@ -9,8 +9,10 @@ using Grand.Services.Orders;
 using Grand.Services.Payments;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.WebUtilities;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 
 namespace Grand.Plugin.Payments.HealthPay
@@ -59,9 +61,9 @@ namespace Grand.Plugin.Payments.HealthPay
         /// <returns></returns>
         private string GetHealthyPayUrl()
         {
-            return _healthyPaymentSettings.UseSandbox ?
-                "https://www.whitecoat.com.au" :
-                "https://www.whitecoat.com.au/production";
+            return _healthyPaymentSettings.UseSandbox ? 
+                                          "http://localhost:5000/payment" : 
+                                          "https://healthypay.com.au/payment";
         }
 
         #endregion
@@ -84,7 +86,19 @@ namespace Grand.Plugin.Payments.HealthPay
         /// <param name="postProcessPaymentRequest">Payment info required for an order processing</param>
         public void PostProcessPayment(PostProcessPaymentRequest postProcessPaymentRequest)
         {
-            var url = GetHealthyPayUrl();
+            var order_id = postProcessPaymentRequest.Order.Id;
+            var queryParameters = new Dictionary<string, string>
+            {
+                ["access_token"] = "access_token", 
+                ["success_url"] = $"http://localhost:16593/orderdetails/{order_id}",
+                ["failure_url"] = "http://localhost:16593/order/history",
+                ["amount"] = postProcessPaymentRequest.Order.OrderTotal.ToString(CultureInfo.CreateSpecificCulture("en-GB")),
+                ["order_id"] = order_id
+
+            };
+
+            var url = QueryHelpers.AddQueryString(GetHealthyPayUrl(), queryParameters);
+
             _httpContextAccessor.HttpContext.Response.Redirect(url);
         }
 
