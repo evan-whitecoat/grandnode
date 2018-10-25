@@ -90,7 +90,7 @@ namespace Grand.Plugin.Payments.HealthPay
             var queryParameters = new Dictionary<string, string>
             {
                 ["access_token"] = "access_token", 
-                ["success_url"] = $"http://localhost:16593/orderdetails/{order_id}",
+                ["success_url"] = $"http://localhost:16593/orderdetails/markaspaid/{order_id}",
                 ["failure_url"] = "http://localhost:16593/order/history",
                 ["amount"] = postProcessPaymentRequest.Order.OrderTotal.ToString(CultureInfo.CreateSpecificCulture("en-GB")),
                 ["order_id"] = order_id

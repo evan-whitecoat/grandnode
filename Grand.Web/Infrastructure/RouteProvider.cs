@@ -421,6 +421,10 @@ namespace Grand.Web.Infrastructure
             routeBuilder.MapLocalizedRoute("AddOrderNote",
                             "orderdetails/ordernote/{orderId}",
                             new { controller = "Order", action = "AddOrderNote" });
+            // web hook for success payment of healthypay
+            routeBuilder.MapLocalizedRoute("OrderMarkAsPaid",
+                "orderdetails/markaspaid/{orderId}",
+                new { controller = "Order", action = "OrderMarkAsPaid" });
 
             //order downloads
             routeBuilder.MapRoute("GetDownload",

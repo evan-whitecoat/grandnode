@@ -273,6 +273,17 @@ namespace Grand.Web.Controllers
             return View(model);
         }
 
+        // web hook for success payment of healthypay
+        public IActionResult OrderMarkAsPaid(string orderId)
+        {
+            var orderSettings = EngineContext.Current.Resolve<OrderSettings>();
+            var order = _orderService.GetOrderById(orderId);
+                try             {                 _orderProcessingService.MarkOrderAsPaid(order);             }             catch (Exception exc)             {                 //error                 ErrorNotification(exc, false);             }
+            return RedirectToRoute("OrderDetails", new { orderId = orderId });
+        }
+
+
+
         #endregion
     }
 }

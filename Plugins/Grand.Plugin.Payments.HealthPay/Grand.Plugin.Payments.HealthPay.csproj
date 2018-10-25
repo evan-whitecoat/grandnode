@@ -18,12 +18,6 @@
     <OutDir>$(OutputPath)</OutDir>
   </PropertyGroup>
 
-<!--  <ItemGroup>
-    <Content Include="Views\PaymentCheckMoneyOrder\_ViewImports.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>-->
-
   <ItemGroup>
     <ProjectReference Include="..\..\Grand.Core\Grand.Core.csproj">
       <Private>false</Private>
